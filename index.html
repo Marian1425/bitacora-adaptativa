@@ -11,9 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kalam:wght@300;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Sofia&display=swap"
         rel="stylesheet">
-
 </head>
 <style>
     nav {
@@ -33,7 +32,6 @@
         padding: 0;
         margin: 0;
         text-align: center;
-        font-family: "Montserrat Alternates", sans-serif;
         transition: 1s;
         transform: scale(1.2);
     }
@@ -41,6 +39,7 @@
     nav ul li {
         display: inline;
         margin: 10px;
+        font-family: "Merriweather", serif;
     }
 
     nav a:hover {
@@ -57,23 +56,40 @@
         margin-right: auto;
     }
 
+    .header {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        color: #CD64B1;
+    }
+
     h1 {
         font-size: var(--tamaño);
+        text-align: center;
+        font-family: "Oswald", sans-serif;
     }
 
     h2 {
         font-size: var(--tamañoh2);
+        font-family: "Monda", sans-serif;
     }
 
     p {
         font-size: var(--texto);
+        font-family: "Montserrat", sans-serif;
+    }
+
+    ul li {
+        font-family: "Montserrat", sans-serif;
     }
 
     .mascara {
-            mask-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png);
-            mask-repeat: no-repeat;
-        }
-    
+        mask-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png);
+        mask-repeat: no-repeat;
+    }
+
 
 
     @property --cont {
@@ -108,36 +124,37 @@
         }
     }
 
-    @media (max-width: 700px){
-            nav ul{
-                text-align: center;
-            }
-            nav ul li{
-                display: block;
-                margin: 10px;
-            }
+    @media (max-width: 700px) {
+        nav ul {
+            text-align: center;
         }
+
+        nav ul li {
+            display: block;
+            margin: 10px;
+        }
+    }
 </style>
 
 <body>
-    <header>
 
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#clase">Temas vistos en clase.</a></li>
-            <li><a href="#previos">Gráfico de temas previos.</a></li>
-            <li><a href="#dom">DOM.</a></li>
-            <li><a href="#view">viewport.</a></li>
-            <li><a href="#platica">Plática de IA.</a></li>
-            <li><a href="#medida">Unidades de medida</a></li>
-            <li><a href="#mascara">Mascara</a></li>
-            <li><a href="#animacion">Animation</a></li>
-            <li><a href="#img">Imegenes</a></li>
-        </ul>
-    </nav>
 
     <section>
+        <div class="header">
+            <header>
+                <h1>Diseño Web HTML5 y CSS3 <br> Adaptativo <br> Luisa Marian Hernandez Medina <br> Grupo A</h1>
+            </header>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#clase">Temas vistos en clase</a></li>
+                <li><a href="#previos">Gráfico de temas previos</a></li>
+                <li><a href="#con">Conceptos</a></li>
+                <li><a href="#pra">Practicas</a></li>
+                <li><a href="#ia">IA</a></li>
+            </ul>
+        </nav>
         <div class="contenedor">
             <h1 id="clase">Temas vistos en clase.</h1>
             <p>
@@ -149,22 +166,24 @@
                 <li>Diagrama de Wireframes.</li>
                 <li>UX. Es como se siente una persona al interactuar con un producto, servicio o sistema. </li>
                 <li>Prototipado. Es como crear un boceto o una versión preliminar de una página web antes de
-                    desarrollarla
-                    completamente. Baja fidelidad (Wireframes). Alta fidelidad (Wireframes Finos). </li>
+                    desarrollarla completamente. Baja fidelidad (Wireframes). Alta fidelidad (Wireframes Finos). </li>
             </ul>
 
             <h2>HTML (hypertext markup language).</h2>
             <ul>
-                <li>Nacimiento. Tim Berners-Lee.</li>
+                <li>Lenguaje de etiquetas. Es un lenguaje de marcado utilizado para estructurar el contenido de una
+                    página web.</li>
+                <li>Nacimiento. Tim Berners-Lee 1991.</li>
                 <li>Objetivo. Facilitar el intercambio de información mediante la creación de una plataforma basada en
                     hipertexto. </li>
                 <li>Fechas. 1993, 2015.</li>
             </ul>
 
-            <h2>CSS (Cascading Style Sheets).</h2>
+            <h2>CSS (Cascading Style Sheets). Lenguaje de Estilos.</h2>
             <ul>
                 <li>Nacimiento. Hakon Wium Lie en 1994.</li>
-                <li>Objetivo. Facilitar el diseño visual sin alterar la estructura básica del HTML.</li>
+                <li>Objetivo. Facilitar el diseño visual sin alterar la estructura básica definida del HTML.</li>
+                <li>Fechas. 1996 y 1999.</li>
             </ul>
 
             <h2>HTML5.</h2>
@@ -177,7 +196,7 @@
                 <li>Lenguaje de estilos define como se presenta el lenguaje en la web.</li>
             </ul>
 
-            <h2>JS (JavaScript)</h2>
+            <h2>JS (JavaScript). Lenguaje de programación.</h2>
             <ul>
                 <li>Se utiliza principalmente para crear interactividad o lógica en las páginas web.</li>
             </ul>
@@ -185,6 +204,25 @@
             <h2>Arquitectura de la información. </h2>
             <p>Se aplica en diversas áreas, como el diseño UX/UI y desarrollo web.</p>
             </p>
+
+            <h2>IDE.</h2>
+            <p>VISUAL STUDIO CODE. Entorno de Desarrollo Integrado. <br> Es una <b>aplicación de software</b> que
+                proporciona un conjunto completo de herramientas para ficilitar la programación.</p>
+
+            <h2>DOM</h2>
+            <P>Modelo de Objetos del Documento.</P>
+            <ul>
+                <li><b>DOM CSS.</b>
+                    <P>Nos referimos a cómo los estilos (CSS) afectan a los elementos del DOM (Document Object Model).
+                    </P>
+                </li>
+                <li><b>DOM Eventos.</b>
+                    <p>Ejmplo. Hover.</p>
+                </li>
+                <li><b>DOM Animation.</b>
+                    <p>Animaciones.</p>
+                </li>
+            </ul>
         </div>
 
 
@@ -198,7 +236,8 @@
         </div>
 
         <div class="contenedor">
-            <h1 id="dom">DOM(Document Object Model.)</h1>
+            <h1 id="con">Conceptos.</h1>
+            <h2>DOM(Document Object Model.)</h2>
             <p>Es una representación en forma de árbol de todo lo que contiene una pagina web:
             <ul>
                 <li>Texto.</li>
@@ -217,10 +256,10 @@
 
             <h2>DOM CSS</h2>
             <p>Parte del DOM que describe y controla los estilos de una página.</p>
-        </div>
 
-        <div class="contenedor">
-            <h1 id="view">¿Para qué sirve "viewport"?</h1>
+
+
+            <h2>¿Para qué sirve "viewport"?</h2>
             <p>Sirve para indicarle al navegador cómo debe controlar la escala y el diseño de una página web en
                 diferentes
                 dispositivos, especialmente en móviles, para asegurar que el contenido sea visible, legible y se adapte
@@ -230,19 +269,16 @@
                 debe tener la ventana gráfica del dispositivo y qué escala inicial debe mostrarse el documento, evitando
                 así
                 que el usuario tenga que hacer zoom.</p>
-        </div>
 
-        <div class="contenedor">
-            <h1 id="platica">Plática de IA</h1>
+
+            <h2>Plática de IA</h2>
             <p>El día miercoles no entendí lo que estaban diciendo ya que el sonido del lugar era muy malo, pero
                 basandome
                 en las diapositivas presentadas se hablo sobre la historia de la IA y todo las investigaciones que se
                 hicieron hasta llegar a lo que ahora conocemos como Inteligencia Artificial.
             </p>
-        </div>
 
-        <div class="contenedor">
-            <h1 id="medida">Unidades de medida estáticas y relativas.</h1>
+            <h2>Unidades de medida estáticas y relativas.</h2>
             <h2>Absolutas.</h2>
             <p>
                 Son las unidadesd e medida en CSS que realizan alusión a las unidades que no cambian, aquellas que en
@@ -270,18 +306,8 @@
                 <li><b>rem:</b> tamaño de feunte personaliazdo.</li>
             </ul>
             </p>
-        </div>
 
-        <div class="contenedor">
-            <h1 id="mascara">Mascara</h1>
-
-            <div class="mascara">
-        <img src="https://previews.123rf.com/images/el4anes/el4anes1612/el4anes161200697/69350424-wallpaper-with-cats-cartoon-seamless-pattern.jpg" alt="Img de Star Wars">
-    </div>
-        </div>
-
-        <div class="contenedor">
-            <h1 id="animacion">Animaciones.</h1>
+            <h2>Animaciones.</h2>
             <p>
             <ul>
                 <li><b>Color Animation.</b> No es un término estándar, sino que se refiere al uso de la teoría del color
@@ -307,7 +333,16 @@
         </div>
 
         <div class="contenedor">
-            <h1 id="img">Imagenes.</h1>
+            <h1 id="pra">Practicas.</h1>
+            <h2>Mascara</h2>
+            <p>Esto es una "Mascara"</p>
+            <div class="mascara">
+                <img src="https://previews.123rf.com/images/el4anes/el4anes1612/el4anes161200697/69350424-wallpaper-with-cats-cartoon-seamless-pattern.jpg"
+                    alt="Img de Star Wars">
+            </div>
+
+            <h2>Picture.</h2>
+            <p>Con la etiqueta "Source media" se puede cambiar la imagen dependiendo del tamaño de los pixeles.</p>
             <picture>
                 <source media="(min-width: 1000px)"
                     srcset="https://itsoundsalternative.com/wp-content/uploads/2023/03/nana-1.jpg">
@@ -316,6 +351,19 @@
                 <img src="https://i.pinimg.com/736x/4b/3c/87/4b3c879977b6d5084e55fa24de252744.jpg"
                     alt="banner de sitio">
             </picture>
+        </div>
+
+        <div class="contenedor">
+            <h1 id="ia">IA</h1>
+            <p>
+                Hacer una presentación y traducirla al inglés con IA.
+            </p>
+            <p><b>Español:</b>
+                https://www.canva.com/design/DAGyQqMoSMw/V2PTTp4_tvbkAW2j9roHEA/edit?utm_content=DAGyQqMoSMw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+                <br><br>
+                <b>Inglés:</b>
+                https://www.canva.com/design/DAGyQ0apBtA/cvow5yK4Fh5QUYE-IBiwIQ/edit?utm_content=DAGyQ0apBtA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+            </p>
         </div>
     </section>
 
