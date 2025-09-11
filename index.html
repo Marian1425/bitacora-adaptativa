@@ -22,8 +22,6 @@
         position: sticky;
         overflow: hidden;
         top: 0;
-        display: flex;
-        justify-content: space-evenly;
         align-items: center;
     }
 
@@ -40,6 +38,7 @@
         display: inline;
         margin: 10px;
         font-family: "Merriweather", serif;
+        text-decoration: none;
     }
 
     nav ul li a {
@@ -48,7 +47,6 @@
         font-size: 20px;
         text-decoration: none;
     }
-
 
     nav a:hover {
         background-color: #DAD3F2;
@@ -63,7 +61,7 @@
         margin-left: auto;
         margin-right: auto;
     }
-
+    
     .header {
         width: 100%;
         height: 100%;
@@ -96,6 +94,12 @@
     .mascara {
         mask-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png);
         mask-repeat: no-repeat;
+    }
+
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 
@@ -157,10 +161,11 @@
         <nav>
             <ul>
                 <li><a href="#clase">Temas vistos en clase</a></li>
-                <li><a href="#previos">Gráfico de temas previos</a></li>
+                <li><a href="#tra">Trabajos</a></li>
                 <li><a href="#con">Conceptos</a></li>
                 <li><a href="#pra">Practicas</a></li>
                 <li><a href="#ia">IA</a></li>
+                <li><a href="#dia">Diagrama de flujo</a></li>
             </ul>
         </nav>
         <div class="contenedor">
@@ -235,13 +240,26 @@
 
 
         <div class="contenedor">
-            <h1 id="previos">Gráfico de temas previos</h1>
+            <h1 id="tra">Trabajos.</h1>
+            <h2>Gráfico de temas previos</h2>
+            <div class="pre">
             <a href="img/2.png"><img src="img/2.png" width="350" alt="Inografia temas previos"></a>
             <a href="img/3.png"><img src="img/3.png" width="350" alt="Inografia temas previos"></a>
             <a href="img/4.png"><img src="img/4.png" width="350" alt="Inografia temas previos"></a>
             <a href="img/5.png"><img src="img/5.png" width="350" alt="Inografia temas previos"></a>
             <a href="img/6.png"><img src="img/6.png" width="350" alt="Inografia temas previos"></a>
+            </div>
+
+            <h2>DOM página web</h2>
+            <img src="img/DOM.jpg" width="800px" alt="Dom de página web">
+
+            <h2>Figma.</h2>
+            <img src="img/Camion.jpg" width="800px" alt="catura de figma">
+
+            <h2>Diagrama juego.</h2>
+            <img src="img/Juego.jpg" width="800px" alt="diagrama de un juego">
         </div>
+
 
         <div class="contenedor">
             <h1 id="con">Conceptos.</h1>
@@ -366,6 +384,9 @@
             <p>
                 Hacer una presentación y traducirla al inglés con IA.
             </p>
+            <p>
+                La mejor manera de traducir algo es con la IA, ya que el traductor convencional traduce las cosas muy "literal" y la IA busca más contexto.
+                </p>
             <p><b>Español:</b>
                 https://www.canva.com/design/DAGyQqMoSMw/V2PTTp4_tvbkAW2j9roHEA/edit?utm_content=DAGyQqMoSMw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
                 <br><br>
@@ -373,10 +394,13 @@
                 https://www.canva.com/design/DAGyQ0apBtA/cvow5yK4Fh5QUYE-IBiwIQ/edit?utm_content=DAGyQ0apBtA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
             </p>
         </div>
+
+        <div class="contenedor">
+            <h1 id="dia">Diagrama de flujo.</h1>
+            <img src="img/Diagrama de bitácora .png" width="800px" alt="Diagrama de flujo">
+        </div>
     </section>
 
 </body>
 
 </html>
-
-
