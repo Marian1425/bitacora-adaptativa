@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,9 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +18,30 @@
         rel="stylesheet">
 </head>
 <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+        font-size: 2em;
+        padding: 10px 20px;
+    }
+
+    /*Fin Reset*/
+
+
+
+    .contenedor {
+        width: 100px;
+        height: 100px;
+    }
+
     nav {
         background-color: #CAA7DD;
         color: black;
@@ -26,7 +53,7 @@
     }
 
     nav ul {
-        list-style: none;
+        list-style-type: none;
         padding: 0;
         margin: 0;
         text-align: center;
@@ -36,6 +63,7 @@
 
     nav ul li {
         display: inline;
+        position: relative;
         margin: 10px;
         font-family: "Merriweather", serif;
         text-decoration: none;
@@ -52,7 +80,6 @@
         background-color: #DAD3F2;
     }
 
-
     .contenedor {
         width: 80%;
         height: 90%;
@@ -61,7 +88,9 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
+
+
+
     .header {
         width: 100%;
         height: 100%;
@@ -69,6 +98,20 @@
         margin-left: auto;
         margin-right: auto;
         color: #CD64B1;
+    }
+
+    .pic {
+        width: 450px;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .par {
+        font-size: 30px;
+        text-align: center;
+        font-family: "Oswald", sans-serif;
     }
 
     h1 {
@@ -96,12 +139,35 @@
         mask-repeat: no-repeat;
     }
 
-    img{
+    img {
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
 
+    .txt {
+        color: black;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .cyt {
+        color: #CD64B1;
+        font-size: 6rem;
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .contenedor {
+            background-color: #e7c7dcc2;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .contenedor {
+            background-color: #e2bcd56e;
+        }
+    }
 
 
     @property --cont {
@@ -168,6 +234,7 @@
                 <li><a href="#dia">Diagrama de flujo</a></li>
             </ul>
         </nav>
+
         <div class="contenedor">
             <h1 id="clase">Temas vistos en clase.</h1>
             <p>
@@ -243,21 +310,21 @@
             <h1 id="tra">Trabajos.</h1>
             <h2>Gráfico de temas previos</h2>
             <div class="pre">
-            <a href="img/2.png"><img src="img/2.png" width="350" alt="Inografia temas previos"></a>
-            <a href="img/3.png"><img src="img/3.png" width="350" alt="Inografia temas previos"></a>
-            <a href="img/4.png"><img src="img/4.png" width="350" alt="Inografia temas previos"></a>
-            <a href="img/5.png"><img src="img/5.png" width="350" alt="Inografia temas previos"></a>
-            <a href="img/6.png"><img src="img/6.png" width="350" alt="Inografia temas previos"></a>
+                <a href="img/2.png"><img src="img/2.png" width="350" alt="Inografia temas previos"></a>
+                <a href="img/3.png"><img src="img/3.png" width="350" alt="Inografia temas previos"></a>
+                <a href="img/4.png"><img src="img/4.png" width="350" alt="Inografia temas previos"></a>
+                <a href="img/5.png"><img src="img/5.png" width="350" alt="Inografia temas previos"></a>
+                <a href="img/6.png"><img src="img/6.png" width="350" alt="Inografia temas previos"></a>
             </div>
 
             <h2>DOM página web</h2>
-            <img src="img/DOM.jpg" width="800px" alt="Dom de página web">
+            <img class="pic" src="img/DOM.jpg" width="800px" alt="Dom de página web">
 
             <h2>Figma.</h2>
-            <img src="img/Camion.jpg" width="800px" alt="catura de figma">
+            <img class="pic" src="img/Camion.jpg" width="800px" alt="catura de figma">
 
             <h2>Diagrama juego.</h2>
-            <img src="img/Juego.jpg" width="800px" alt="diagrama de un juego">
+            <img class="pic" src="img/Juego.jpg" width="800px" alt="diagrama de un juego">
         </div>
 
 
@@ -356,6 +423,69 @@
                     si el elemento vuelve a su estilo original.</li>
             </ul>
             </p>
+
+            <h2>Wireframes</h2>
+            <p>
+            <ul>
+                <li><b>Prototipo de baja fidelidad WIREFRAMES.</b>Representación simple, generalmente en papel o bocetos
+                    digitales.</li>
+                <li><b>De alta fidelidad WIREFRAMES FINOS. </b> Se asemeja mucho al producto final en diseño y
+                    funcionalidad.</li>
+                <li><b>¿En qué consiste el prototipado? </b></li>
+                <ul>
+                    <li>Definición de requisitos.</li>
+                    <li>Creación del prototipo.</li>
+                    <li>Pruebas y validación.</li>
+                    <li>Iteración y mejora.</li>
+                </ul>
+                <li><b>Prototipos de baja fidelidad (LO-FI). </b> Se enfocan en la estructura y la funcionalidad general
+                    sin detalles visuales avanzados ni interactividad compleja. Son ideales para validar ideas de manera
+                    rápida y económica antes de invertir en un diseño detallado.</li>
+                <li><b>Tipos de prototipos de baja fidelidad.</b></li>
+                <ul>
+                    <li><b>Bocetos a mano (Sketching). </b> Se usa para la lluvia de ideas.</li>
+                    <li><b>Wireframes estáticos. </b> Representan la disposición de elementos como botones, menús y
+                        formularios.</li>
+                    <li><b>Mapa del sitio. </b> Secuencia de ilustraciones que muestran el flujo de interacción de un
+                        usuario.</li>
+                </ul>
+                <li><b>Nota.</b> Imágenes siempre van con una equis. </li>
+            </ul>
+            </p>
+
+            <h2>Mobile First.</h2>
+            <p>
+            <ul>
+                <li>Prioriza el diseño y desarrollo para dispositivos móviles (smartphones, tablets) antes que para
+                    computadoras. Se empieza con la pantalla más pequeña y se va escalando. </li>
+                <li>Responde al creciente uso de internet desde móviles. En México el 90% de los usuarios de internet se
+                    conectan vía smartphone.</li>
+                <li><b>Mejor Experiencia de Usuario (UX):</b> Sitios más rápidos, fáciles de usar y adaptados a
+                    pantallas táctiles.</li>
+                <li><b>SEO.</b></li>
+                <li><b>Mayor rendimiento: </b> Al iniciar con menos elementos, se logra una carga más rápida.</li>
+                <li><b>Foco en el Contenido Esencial.</b> Obliga a priorizar la información mas importante para
+                    pantallas pequeñas. </li>
+            </ul>
+            </p>
+            <img class="pic" src="img/mobile.png" alt="img codigo">
+
+            <h2>Logo.</h2>
+            <p>
+            <ul>
+                <li><b>Logotipo. </b>Solo texto.</li>
+                <li><b>Isotipo.</b> Solo símbolo.</li>
+                <li><b>Imagotipo. </b> Texto y símbolos combinados.</li>
+                <li><b>Isologo.</b> Texto y símbolo como uno solo. No es recomendado en la web ya que es difícil la lectura. </li>
+                <li><b>Indicadores de un buen logo.</b> </li>
+                <ul>
+                    <li>Se debe reproducir a una tinta.</li>
+                    <li>Tiene que tener escalabilidad.</li>
+                    <li>Utilizar una retícula para su diseño.</li>
+                    </ul>
+                <li>La “X” o cualquier otra marca que se use en la retícula sirve para indicar la distancia mínima que debe respetarse alrededor del logotipo.</li>
+            </ul>
+            </p>
         </div>
 
         <div class="contenedor">
@@ -363,20 +493,27 @@
             <h2>Mascara</h2>
             <p>Esto es una "Mascara"</p>
             <div class="mascara">
-                <img src="https://previews.123rf.com/images/el4anes/el4anes1612/el4anes161200697/69350424-wallpaper-with-cats-cartoon-seamless-pattern.jpg"
+                <img class="pic"
+                    src="https://previews.123rf.com/images/el4anes/el4anes1612/el4anes161200697/69350424-wallpaper-with-cats-cartoon-seamless-pattern.jpg"
                     alt="Img de Star Wars">
             </div>
 
             <h2>Picture.</h2>
             <p>Con la etiqueta "Source media" se puede cambiar la imagen dependiendo del tamaño de los pixeles.</p>
             <picture>
-                <source media="(min-width: 1000px)"
+                <source class="pic" media="(min-width: 1000px)"
                     srcset="https://itsoundsalternative.com/wp-content/uploads/2023/03/nana-1.jpg">
-                <source media="(min-width: 800px)"
+                <source class="pic" media="(min-width: 800px)"
                     srcset="https://puedjs.unam.mx/goooya/wp-content/uploads/2025/03/Nana.jpg">
-                <img src="https://i.pinimg.com/736x/4b/3c/87/4b3c879977b6d5084e55fa24de252744.jpg"
+                <img class="pic" src="https://i.pinimg.com/736x/4b/3c/87/4b3c879977b6d5084e55fa24de252744.jpg"
                     alt="banner de sitio">
             </picture>
+
+            <h1>Clases separadas por espacios</h1>
+            <p class="txt">Hola</p>
+            <p class="txt cyt">Hola</p>
+            <p class="txt">Hola</p>
+            <img class="pic" src="img/cyt.png" alt="img codigo">
         </div>
 
         <div class="contenedor">
@@ -385,8 +522,9 @@
                 Hacer una presentación y traducirla al inglés con IA.
             </p>
             <p>
-                La mejor manera de traducir algo es con la IA, ya que el traductor convencional traduce las cosas muy "literal" y la IA busca más contexto.
-                </p>
+                La mejor manera de traducir algo es con la IA, ya que el traductor convencional traduce las cosas muy
+                "literal" y la IA busca más contexto.
+            </p>
             <p><b>Español:</b>
                 https://www.canva.com/design/DAGyQqMoSMw/V2PTTp4_tvbkAW2j9roHEA/edit?utm_content=DAGyQqMoSMw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
                 <br><br>
@@ -395,10 +533,13 @@
             </p>
         </div>
 
+
         <div class="contenedor">
             <h1 id="dia">Diagrama de flujo.</h1>
-            <img src="img/Diagrama de bitácora .png" width="800px" alt="Diagrama de flujo">
+            <img class="pic" src="img/Diagrama de bitácora .png" width="800px" alt="Diagrama de flujo">
         </div>
+
+
     </section>
 
 </body>
