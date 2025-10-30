@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        #comp {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #f08eb0;
+        }
+
+        #fondo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #personaje {
+            position: absolute;
+            top: 5%;
+            left: 40%;
+            width: 15%;
+            height: auto;
+            z-index: 2;
+        }
+
+        #personaje img{
+            width: 100%;
+            max-width: 2000px;
+        }
+
+        #arriba {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 98%;
+            height: 100%;
+            z-index: 3;
+        }
+
+        .texto {
+            padding: 50px 20px;
+            background-color: #f08eb0;
+            text-align: center;
+            min-height: 500px;
+        }
+
+        .texto h2 {
+            font-size: 2em;
+            margin-bottom: 50px;
+        }
+
+        .texto p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            #comp {
+                height: 60vh;
+            }
+
+            .texto {
+                padding: 30px 15px;
+            }
+
+            .texto h2 {
+                font-size: 1.6em;
+            }
+
+            .texto p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #comp {
+                height: 50vh;
+            }
+
+            #personaje{
+                left: 35%;
+                width: 25%;
+            }
+
+            .texto {
+                padding: 20px 10px;
+            }
+
+            .texto h2 {
+                font-size: 1.4em;
+            }
+
+            .texto p {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="comp">
+
+        <div id="fondo">
+            <img src="ima/fondo.png" alt="img fondo">
+        </div>
+
+        <div id="personaje">
+            <img src="ima/personaje.png" alt="img personaje">
+        </div>
+
+        <div id="arriba">
+            <img src="ima/arriba.png" alt="img arriba">
+        </div>
+
+    </div>
+
+    <section class="texto">
+        <h2>Mi Hombre Ideal.</h2>
+        <p>Karina, una aspirante a cirujana plástica, decide crear al chico ideal tras múltiples decepciones
+            amorosas. Al conocer a Christian, un joven amable con cicatrices del pasado, inicia un arriesgado plan
+            para transformarlo, pero deberá enfrentar las consecuencias y aprender qué es el amor verdadero</p>
+        <div style="height: 500px;"></div>
+        <p>Fin de la página.</p>
+    </section>
+
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const fondo = document.getElementById('fondo');
+        const personaje = document.getElementById('personaje');
+        const arriba = document.getElementById('arriba');
+        const container = document.getElementById('comp');
+        const speed1 = 0.4;
+        const speed2 = 0.2;
+        const speed3 = 0.1;
+
+        function updateParallax() {
+            const scrollOffset = container.getBoundingClientRect().top;
+            fondo.style.transform = `translate3d(0, ${scrollOffset * speed1}px, 0)`;
+
+            personaje.style.transform = `translate3d(0, ${scrollOffset * speed2}px, 0)`;
+
+            arriba.style.transform = `translate3d(0, ${scrollOffset * speed3}px, 0)`;
+
+
+        }
+
+        window.addEventListener('scroll', updateParallax);
+
+        updateParallax();
+    });
+</script>
+
+</html>
