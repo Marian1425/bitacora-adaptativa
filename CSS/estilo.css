@@ -1,22 +1,26 @@
 section {
     width: auto;
     height: auto;
-    background-image: url(https://i.pinimg.com/736x/e0/17/ec/e017ec101c2d26566f2b90c19f2950ab.jpg);
+    background-image: url(https://i.pinimg.com/736x/2c/10/19/2c10193b77235622a005d90e9061db30.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-nav {
+header {
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+/*nav {
     width: auto;
     height: auto;
     background-color: #CAA7DD;
     position: sticky;
     top: 0;
     padding-top: 0%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    
     overflow: hidden;
 }
 
@@ -25,11 +29,7 @@ nav a {
     text-decoration: none;
     font-size: 15px;
     padding: 30px;
-    font-family: "Montserrat Alternates", sans-serif;
-    transition: 1s;
-    transform: scale(1.2);
-}
+    
+    
+}*/
 
-nav a:hover {
-    background-color: #DAD3F2;
-}
