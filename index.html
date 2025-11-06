@@ -46,6 +46,38 @@
         height: 100px;
     }
 
+    .cookies{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #190f24;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cookies p{
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .cookies a{
+        color: white;
+        text-decoration: underline;
+    }
+
+    .cookies button{
+        background-color: #CD64B1;
+        border: none;
+        padding: 8px 15px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
     nav {
         background-color: #190f24;
         color: white;
@@ -350,6 +382,14 @@
             </ul>
         </nav>
 
+        <div id="cookies" class="cookies">
+            <p>
+                Este sitio web utiliza cookies para mejorar la experiencia del usuario.
+                <a href="#">Más información</a>
+                </p>
+                <button id="accept-cookies">Aceptar</button>
+            </div>
+
         <div class="contenedor">
             <h1 id="clase">Temas vistos en clase.</h1>
             <p>
@@ -486,8 +526,8 @@
 
                 <b>Paso 3: Redactar la cotización en un formato formal.</b>
                     <li>Condiciones(forma de pago, tiempo de validez, entrega, garantía). </li>
-                </p>
-
+                </p> <br>
+                <img class="pic" src="img/cotizacion.jpg" alt="img cotización"> <br>
 
         </div> <br>
 
@@ -724,6 +764,7 @@
                 <li><b>Align-self.</b>Permite alinear individualmente un solo elemento aunque los demás estén distintos.
                     Sirve para mover una caja independientemente de las otras.</li>
             </p><br>
+            <img class="pic" src="img/flex.png" alt="img flex">
         </div>  <br>
 
         <div class="contenedor">
@@ -744,7 +785,7 @@
                 <source class="pic" media="(min-width: 800px)"
                     srcset="https://puedjs.unam.mx/goooya/wp-content/uploads/2025/03/Nana.jpg">
                 <img class="pic" src="https://i.pinimg.com/736x/4b/3c/87/4b3c879977b6d5084e55fa24de252744.jpg"
-                    alt="banner de sitio">
+                    alt="banner de sitio"> <br>
             </picture> <br>
 
             <h2>Clases separadas por espacios</h2><br>
@@ -819,7 +860,7 @@
             </a>
 
             <a href="index comp2.html">
-                <h2 class="links">Composición JavaScript.</h2>
+                <h2 class="links">Composición Parallax.</h2>
                 </a>
         </div>
 
@@ -827,5 +868,19 @@
     </section>
 
 </body>
+
+<script>
+    const banner = document.getElementById('cookies');
+    const button = document.getElementById('accept-cookies')
+
+    if(localStorage.getItem('cookiesAccepted')) {
+        banner.style.display = 'none';
+    }
+
+    button.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        banner.style.display = 'none';
+    });
+    </script>
 
 </html>
